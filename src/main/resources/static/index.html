@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Password Generator</title>
+    <script>
+        async function generatePassword() {
+            try {
+                const response = await fetch('/api/v1/password');
+                document.getElementById('password').textContent = await response.text();
+            } catch (error) {
+                console.error('Error fetching password:', error);
+            }
+        }
+    </script>
+</head>
+<body>
+<h2>Password Generator</h2>
+<button onclick="generatePassword()">Generate Password</button>
+<p id="password">Your generated password will appear here.</p>
+</body>
+</html>

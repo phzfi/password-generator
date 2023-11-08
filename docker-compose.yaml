@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  app:
+    container_name: password_generator
+    build: .
+    ports:
+      - "80:80"
