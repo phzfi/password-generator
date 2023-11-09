@@ -5,7 +5,9 @@
     <script>
         async function generatePassword() {
             try {
-                const response = await fetch('/api/v1/password');
+                const response = await fetch('/api/v1/password', {
+                    method: "POST"
+                });
                 document.getElementById('password').textContent = await response.text();
             } catch (error) {
                 console.error('Error fetching password:', error);
@@ -17,5 +19,7 @@
 <h2>Password Generator</h2>
 <button onclick="generatePassword()">Generate Password</button>
 <p id="password">Your generated password will appear here.</p>
+<br/>
+<span style="font-size: small">Source code can be found at: <a href="https://github.com/phzfi/password-generator">https://github.com/phzfi/password-generator</a></span>
 </body>
 </html>
