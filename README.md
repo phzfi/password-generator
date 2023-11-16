@@ -7,8 +7,6 @@ Pre-requirement:
 Run with Maven + Java
 * Linux:
   * ./run.sh
-* Windows:
-  * run.bat
 
 Run with Docker (using docker container)
 * Linux:

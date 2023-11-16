@@ -7,7 +7,7 @@ COPY .mvn .mvn
 COPY pom.xml .
 COPY src src
 
-RUN ./mvnw install -DskipTests
+RUN ./mvnw clean install -DskipTests
 
 
 FROM openjdk:17-jdk-slim
